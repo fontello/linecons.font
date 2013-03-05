@@ -1,0 +1,382 @@
+---
+# This is configuration file for font builder and other support scripts.
+# Format is descriped below.
+#
+#
+# # metadata, to generate demo & fontello info dialogs
+# meta:
+#
+#  author: Daniel Buce
+#  homepage: http://...
+#  email: ...
+#  twitter: http://twitter.com/...
+#  dribbble: http://dribbble.com/...
+#  license: SIL
+#  license_url: http://scripts.sil.org/OFL
+#
+#   css-prefix: "icon-"             # prefix for css-generated classes
+#   demo-columns: 4                 # used for html demo page generation
+#
+# # Font headers. All vars from here will be used as font
+# # params in fontforge http://fontforge.sourceforge.net/python.html
+# font:
+#
+#   version: "1.0"
+#
+#   # use !!!small!!! letters a-z, or Opera will fail under OS X
+#   # fontname will be also used as file name.
+#   fontname: myfont
+#
+#   fullname: MyFont
+#   familyname: Myfont
+#
+#   copyright: Copyright (C) 2012 by xxxxxxxx
+#
+#   ascent: 1638
+#   descent: 410
+#   weight: Regular
+#
+#
+# #
+# # Optional. You can apply global rescale + offset to all font glyphs.
+# # Param values ar 0..1, where 1 = 100%. 
+# #
+# transform:
+#   baseline: 0.2                 # baseline for rescale symmetry. Default value
+#                                 # calculated from ascent/decsent
+#   rescale: 0.68                 # rescale glyphs and center around baseline
+#   offset: -0.1                  # shift up/down
+#
+# glyphs:
+#   - file: glyph1_file           # file name, without extention
+#     from: 0xNNN                 # Source code for remapper or merge tool
+#     code: 0xNNN                 # Symbol code 0x - hex
+#     css: icon-gpyph1-name       # For generated CSS
+#     search: [][word1, word2]      # Search aliases (array). CSS name will be
+#                                 # included automatically
+#     src: first_font_alias       # alias to font for merge tool
+#                                 # list of aliases in src_fonts section
+#
+#     #
+#     # local transformations, only for this glyph (optional)
+#     #
+#     transform:                  # personal glyph transformation.
+#       rescale_rel               # *_rel - applyed after global.
+#       offset: 0.2               # without *_rel - override global
+#
+# #
+# # Fonts aliases used only in font merge tool
+# #
+# src_fonts:
+#   first_font_alias: "/absolute/path/to/first/font.ttf"
+#
+################################################################################
+#
+
+
+meta:
+  author: Designmodo for Smashing Magazine
+  homepage: http://www.smashingmagazine.com/2013/02/02/freebie-user-interface-kit-icons/
+  email: info@designmodo.com
+  twitter: https://www.twitter.com/designmodo
+  license: CC BY
+
+  css_prefix: "icon-"
+  columns: 4
+
+font:
+  version: "1.0"
+
+  # use !!!small!!! letters a-z, or Opera will fail under OS X
+  # fontname will be also used as file name.
+  fontname: linecons
+
+  fullname: Linecons
+  familyname: Linecons
+
+  copyright: Copyright (C) 2013 by Designmodo
+
+  ascent: 850
+  descent: 150
+  weight: Normal
+
+
+glyphs:
+  -
+    css: music
+    code: 0xe022
+    uid: 572c9ded6a688698dc275b30ff30fefa
+    search: [music, note, song, sound]
+
+  -
+    css: search
+    code: 0xe009
+    uid: 9725db89b610135dc76cd8a21afffa83
+    search: [search, find]
+
+  -
+    css: mail
+    code: 0xe019
+    uid: 91bac16b22827347e9ee20477f0b44d2
+    search: [mail, email]
+
+  -
+    css: heart
+    code: 0xe000
+    uid: b19ac67070bc44e310990016288e449c
+    search: [heart]
+
+  -
+    css: star
+    code: 0xe002
+    uid: 0817b47d6e5f1d85f2428640a021f0c4
+    search: [star]
+
+  -
+    css: user
+    code: 0xe007
+    uid: 56a0672588820ab1a16363e5d07dd22e
+    search: [profile, contact, user]
+
+  -
+    css: videocam
+    code: 0xe005
+    uid: f2a37db235ca1951d60d7ebc9733eb54
+    search: [facetime, movie, video, film]
+  -
+    css: camera
+    code: 0xe00b
+    uid: b59cc4d390a6df564a055f43c03a6af5
+    search: [camera, photo]
+  -
+    css: photo
+    code: 0xe01b
+    uid: 8573943a49ed6dd8f7819070445baa46
+    search: [photo]
+
+  -
+    css: attach
+    code: 0xe029
+    uid: 359f380b2113cb40259269aed843e33d
+    search: [attach, clip, paperclip]
+
+  -
+    css: lock
+    code: 0xe00d
+    uid: 47e9e56d2b5abe839bcf1e014d643dea
+    search: [lock, close]
+
+  -
+    css: eye
+    code: 0xe013
+    uid: a58c05a8a3ba59ababd4860a30892560
+    search: [eye, subscribe]
+
+  -
+    css: tag
+    code: 0xe00c
+    uid: 930c31d4c72bd792b5dceb6de607c3e0
+    search: [tag, category, price, offer]
+
+  -
+    css: thumbs-up
+    code: 0xe01a
+    uid: 06a2fbb04dffecdb444936073cae9123
+    search: [thumbs, up, like, vote]
+
+  -
+    css: pencil
+    code: 0xe00f
+    uid: 2aeb4987b469d22fcb8b471b6d2cdfff
+    search: [pencil, write, reply, edit]
+
+  -
+    css: comment
+    code: 0xe014
+    uid: 5b1a68729f60f8be3769238379d1b8e9
+    search: [comment, reply, write, chat]
+
+  -
+    css: location
+    code: 0xe012
+    uid: 1ea8ad6dbe1ae9a73565ad16cf88de19
+    search: [location, mark, marker]
+
+  -
+    css: cup
+    code: 0xe016
+    uid: c2958cfd1eed4434ab6e4bd6ab337af9
+    search: [cup]
+  -
+    css: trash
+    code: 0xe006
+    uid: 2cc73cc335f054682c04fe63439c4dcb
+    search: [trash, delete]
+
+  -
+    css: doc
+    code: 0xe018
+    uid: f978da58836f23373882916f05fb70b4
+    search: [doc, article, news]
+  -
+    css: note
+    code: 0xe01c
+    uid: 29f4bce4a60650057c5248e30baa15a6
+    search: [doc, note]
+
+  -
+    css: cog
+    code: 0xe00a
+    uid: 484b4ad2058d17849f205c4054b6f315
+    search: [settings, cog, gear, params]
+  -
+    css: params
+    code: 0xe01f
+    uid: 3e2bd88137dd7ceec98b4bfd8640e5ec
+    search: [settings, cog, gear, params]
+
+  -
+    css: calendar
+    code: 0xe02b
+    uid: 43e4647c57186b5e06874621b5e665be
+    search: [calendar, date]
+  -
+    css: sound
+    code: 0xe004
+    uid: 143d93c9abdee0f4a7a2a810acc62b91
+    search: [volume, sound]
+
+  -
+    css: clock
+    code: 0xe01d
+    uid: ee22dc89481ea63f27654f59dcace804
+    search: [clock, time]
+  -
+    css: lightbulb
+    code: 0xe00e
+    uid: fb3ee9c192c946342e0cdd12f06d7774
+    search: [idea, lamp, light]
+
+  -
+    css: tv
+    code: 0xe003
+    uid: cc5e3696cf6c3ad8c32daaea05355a99
+    search: []
+  -
+    css: desktop
+    code: 0xe011
+    uid: 7697f1734d53461137f05faab3f79cf0
+    search: [desktop, screen, monitor, display]
+  -
+    css: mobile
+    code: 0xe017
+    uid: 6a9f3405aba67bcaee81e7ea38946b27
+    search: [mobile, phone]
+
+  -
+    css: cd
+    code: 0xe02d
+    uid: 52cde78d270e411ccf22c9ec02910d69
+    search: [cd, vynil]
+
+  -
+    css: inbox
+    code: 0xe015
+    uid: efaf7e97e8b1aa7c2b52cc29432c96ca
+    search: [inbox, stack]
+
+  -
+    css: globe
+    code: 0xe02f
+    uid: 1e89103762be72b0720eda0468e62b90
+    search: [globe, world]
+
+  -
+    css: cloud
+    code: 0xe001
+    uid: f6eb7f8aed5dc03a323d5ef2895ae50b
+    search: [cloud]
+
+  -
+    css: paper-plane
+    code: 0xe01e
+    uid: 6fbd93c0d220507921015a15575009e5
+    search: [paper, plane, fly]
+
+  -
+    css: fire
+    code: 0xe028
+    uid: 04309fefab5210bf502d278d65d134cf
+    search: [fire]
+
+  -
+    css: graduation-cap
+    code: 0xe024
+    uid: 4b7f817f780705a5d267ad59e855da91
+    search: [graduation, study]
+
+  -
+    css: megaphone
+    code: 0xe023
+    uid: cdcc1a6693235d1205370c1f47d5e7ad
+    search: [megaphone, bullhorn]
+
+  -
+    css: database
+    code: 0xe021
+    uid: 02ad0683eaa9826f396fa7ccf1f1fb25
+    search: [data, database]
+
+  -
+    css: key
+    code: 0xe008
+    uid: 75347b319511175da51af3955919dbac
+    search: [key]
+
+  -
+    css: beaker
+    code: 0xe025
+    uid: 6cc796276697d8a75ae21bb2df4badc9
+    search: [beaker]
+
+  -
+    css: truck
+    code: 0xe02e
+    uid: f5053e43ef8be31afb905801449ae26d
+    search: [truck]
+
+  -
+    css: money
+    code: 0xe020
+    uid: b8e88705f42bd79580be828233c65da0
+    search: [money, banknote]
+
+  -
+    css: food
+    code: 0xe026
+    uid: b08f8c33777cd6b512d9576fc6e7f405
+    search: [food]
+
+  -
+    css: shop
+    code: 0xe02a
+    uid: 5d27926667773d186de09fda4312af27
+    search: [shop]
+
+  -
+    css: diamond
+    code: 0xe010
+    uid: f8e8b267a9b949804f0c9dd7fed8e477
+    search: [diamond, crystal]
+
+  -
+    css: t-shirt
+    code: 0xe027
+    uid: 862d4faacb164c0412cb3249d43d5d39
+    search: [t-shirt]
+
+  -
+    css: wallet
+    code: 0xe02c
+    uid: d58dc0a0927a7dea2992f615f2fbf400
+    search: [wallet, money]
