@@ -1,4 +1,13 @@
-<!DOCTYPE html><html><head><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta charset="UTF-8"><style type="text/css">.clearfix {
+<!DOCTYPE html><html><head><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta charset="UTF-8"><style type="text/css">/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
   *zoom: 1;
 }
 .clearfix:before,
@@ -669,7 +678,7 @@ blockquote small {
   color: #999;
 }
 blockquote small:before {
-  content: '4  A0';
+  content: '\2014 \00A0';
 }
 blockquote.pull-right {
   float: right;
@@ -686,7 +695,7 @@ blockquote.pull-right small:before {
   content: '';
 }
 blockquote.pull-right small:after {
-  content: ' A0 4';
+  content: '\00A0 \2014';
 }
 q:before,
 q:after,
@@ -713,10 +722,19 @@ body {
   padding-top: 10px;
   z-index: 10;
 }
-.the-icons li {
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
   font-size: 14px;
   line-height: 24px;
-  height: 24px;
 }
 .switch {
   position: absolute;
@@ -738,25 +756,56 @@ body {
 }
 </style><style type="text/css">@font-face {
   font-family: 'linecons';
-  src: url("linecons.eot");
-  src: url("linecons.eot?#iefix") format('embedded-opentype'), url("linecons.woff") format('woff'), url("linecons.ttf") format('truetype'), url("linecons.svg#linecons") format('svg');
+  src: url('../font/linecons.eot?59501811');
+  src: url('../font/linecons.eot?59501811#iefix') format('embedded-opentype'),
+       url('../font/linecons.woff?59501811') format('woff'),
+       url('../font/linecons.ttf?59501811') format('truetype'),
+       url('../font/linecons.svg?59501811#linecons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: 'linecons';
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'linecons';
+    src: url('../font/linecons.svg?59501811#linecons') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "linecons";
   font-style: normal;
   font-weight: normal;
   speak: none;
+ 
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: 0.2em;
+  margin-right: .2em;
   text-align: center;
-  opacity: 0.8;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - magrins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-</style><style type="text/css">
+ 
 .icon-music:before { content: '\e022'; } /* '' */
 .icon-search:before { content: '\e009'; } /* '' */
 .icon-mail:before { content: '\e019'; } /* '' */
@@ -814,4 +863,4 @@ body {
   }
 }
 </script></head><body><div class="container header"><h1>Linecons
- <small>font demo</small></h1><label class="switch"><input type="checkbox" onclick="toggleCodes(this.checked)">show codes</label></div><div id="icons" class="container"><div class="row"><div class="span3"><ul class="the-icons unstyled"><li title="Code: 0xe022"><i class="icon-music"></i> <span class="i-name">icon-music</span><span class="i-code">0xe022</span></li><li title="Code: 0xe009"><i class="icon-search"></i> <span class="i-name">icon-search</span><span class="i-code">0xe009</span></li><li title="Code: 0xe019"><i class="icon-mail"></i> <span class="i-name">icon-mail</span><span class="i-code">0xe019</span></li><li title="Code: 0xe000"><i class="icon-heart"></i> <span class="i-name">icon-heart</span><span class="i-code">0xe000</span></li><li title="Code: 0xe002"><i class="icon-star"></i> <span class="i-name">icon-star</span><span class="i-code">0xe002</span></li><li title="Code: 0xe007"><i class="icon-user"></i> <span class="i-name">icon-user</span><span class="i-code">0xe007</span></li><li title="Code: 0xe005"><i class="icon-videocam"></i> <span class="i-name">icon-videocam</span><span class="i-code">0xe005</span></li><li title="Code: 0xe00b"><i class="icon-camera"></i> <span class="i-name">icon-camera</span><span class="i-code">0xe00b</span></li><li title="Code: 0xe01b"><i class="icon-photo"></i> <span class="i-name">icon-photo</span><span class="i-code">0xe01b</span></li><li title="Code: 0xe029"><i class="icon-attach"></i> <span class="i-name">icon-attach</span><span class="i-code">0xe029</span></li><li title="Code: 0xe00d"><i class="icon-lock"></i> <span class="i-name">icon-lock</span><span class="i-code">0xe00d</span></li><li title="Code: 0xe013"><i class="icon-eye"></i> <span class="i-name">icon-eye</span><span class="i-code">0xe013</span></li></ul></div><div class="span3"><ul class="the-icons unstyled"><li title="Code: 0xe00c"><i class="icon-tag"></i> <span class="i-name">icon-tag</span><span class="i-code">0xe00c</span></li><li title="Code: 0xe01a"><i class="icon-thumbs-up"></i> <span class="i-name">icon-thumbs-up</span><span class="i-code">0xe01a</span></li><li title="Code: 0xe00f"><i class="icon-pencil"></i> <span class="i-name">icon-pencil</span><span class="i-code">0xe00f</span></li><li title="Code: 0xe014"><i class="icon-comment"></i> <span class="i-name">icon-comment</span><span class="i-code">0xe014</span></li><li title="Code: 0xe012"><i class="icon-location"></i> <span class="i-name">icon-location</span><span class="i-code">0xe012</span></li><li title="Code: 0xe016"><i class="icon-cup"></i> <span class="i-name">icon-cup</span><span class="i-code">0xe016</span></li><li title="Code: 0xe006"><i class="icon-trash"></i> <span class="i-name">icon-trash</span><span class="i-code">0xe006</span></li><li title="Code: 0xe018"><i class="icon-doc"></i> <span class="i-name">icon-doc</span><span class="i-code">0xe018</span></li><li title="Code: 0xe01c"><i class="icon-note"></i> <span class="i-name">icon-note</span><span class="i-code">0xe01c</span></li><li title="Code: 0xe00a"><i class="icon-cog"></i> <span class="i-name">icon-cog</span><span class="i-code">0xe00a</span></li><li title="Code: 0xe01f"><i class="icon-params"></i> <span class="i-name">icon-params</span><span class="i-code">0xe01f</span></li><li title="Code: 0xe02b"><i class="icon-calendar"></i> <span class="i-name">icon-calendar</span><span class="i-code">0xe02b</span></li></ul></div><div class="span3"><ul class="the-icons unstyled"><li title="Code: 0xe004"><i class="icon-sound"></i> <span class="i-name">icon-sound</span><span class="i-code">0xe004</span></li><li title="Code: 0xe01d"><i class="icon-clock"></i> <span class="i-name">icon-clock</span><span class="i-code">0xe01d</span></li><li title="Code: 0xe00e"><i class="icon-lightbulb"></i> <span class="i-name">icon-lightbulb</span><span class="i-code">0xe00e</span></li><li title="Code: 0xe003"><i class="icon-tv"></i> <span class="i-name">icon-tv</span><span class="i-code">0xe003</span></li><li title="Code: 0xe011"><i class="icon-desktop"></i> <span class="i-name">icon-desktop</span><span class="i-code">0xe011</span></li><li title="Code: 0xe017"><i class="icon-mobile"></i> <span class="i-name">icon-mobile</span><span class="i-code">0xe017</span></li><li title="Code: 0xe02d"><i class="icon-cd"></i> <span class="i-name">icon-cd</span><span class="i-code">0xe02d</span></li><li title="Code: 0xe015"><i class="icon-inbox"></i> <span class="i-name">icon-inbox</span><span class="i-code">0xe015</span></li><li title="Code: 0xe02f"><i class="icon-globe"></i> <span class="i-name">icon-globe</span><span class="i-code">0xe02f</span></li><li title="Code: 0xe001"><i class="icon-cloud"></i> <span class="i-name">icon-cloud</span><span class="i-code">0xe001</span></li><li title="Code: 0xe01e"><i class="icon-paper-plane"></i> <span class="i-name">icon-paper-plane</span><span class="i-code">0xe01e</span></li><li title="Code: 0xe028"><i class="icon-fire"></i> <span class="i-name">icon-fire</span><span class="i-code">0xe028</span></li></ul></div><div class="span3"><ul class="the-icons unstyled"><li title="Code: 0xe024"><i class="icon-graduation-cap"></i> <span class="i-name">icon-graduation-cap</span><span class="i-code">0xe024</span></li><li title="Code: 0xe023"><i class="icon-megaphone"></i> <span class="i-name">icon-megaphone</span><span class="i-code">0xe023</span></li><li title="Code: 0xe021"><i class="icon-database"></i> <span class="i-name">icon-database</span><span class="i-code">0xe021</span></li><li title="Code: 0xe008"><i class="icon-key"></i> <span class="i-name">icon-key</span><span class="i-code">0xe008</span></li><li title="Code: 0xe025"><i class="icon-beaker"></i> <span class="i-name">icon-beaker</span><span class="i-code">0xe025</span></li><li title="Code: 0xe02e"><i class="icon-truck"></i> <span class="i-name">icon-truck</span><span class="i-code">0xe02e</span></li><li title="Code: 0xe020"><i class="icon-money"></i> <span class="i-name">icon-money</span><span class="i-code">0xe020</span></li><li title="Code: 0xe026"><i class="icon-food"></i> <span class="i-name">icon-food</span><span class="i-code">0xe026</span></li><li title="Code: 0xe02a"><i class="icon-shop"></i> <span class="i-name">icon-shop</span><span class="i-code">0xe02a</span></li><li title="Code: 0xe010"><i class="icon-diamond"></i> <span class="i-name">icon-diamond</span><span class="i-code">0xe010</span></li><li title="Code: 0xe027"><i class="icon-t-shirt"></i> <span class="i-name">icon-t-shirt</span><span class="i-code">0xe027</span></li><li title="Code: 0xe02c"><i class="icon-wallet"></i> <span class="i-name">icon-wallet</span><span class="i-code">0xe02c</span></li></ul></div></div></div></body></html>
+ <small>font demo</small></h1><label class="switch"><input type="checkbox" onclick="toggleCodes(this.checked)">show codes</label></div><div id="icons" class="container"><div class="row"><div title="Code: 0xe022" class="the-icons span3"><i class="icon-music"></i> <span class="i-name">icon-music</span><span class="i-code">0xe022</span></div><div title="Code: 0xe009" class="the-icons span3"><i class="icon-search"></i> <span class="i-name">icon-search</span><span class="i-code">0xe009</span></div><div title="Code: 0xe019" class="the-icons span3"><i class="icon-mail"></i> <span class="i-name">icon-mail</span><span class="i-code">0xe019</span></div><div title="Code: 0xe000" class="the-icons span3"><i class="icon-heart"></i> <span class="i-name">icon-heart</span><span class="i-code">0xe000</span></div></div><div class="row"><div title="Code: 0xe002" class="the-icons span3"><i class="icon-star"></i> <span class="i-name">icon-star</span><span class="i-code">0xe002</span></div><div title="Code: 0xe007" class="the-icons span3"><i class="icon-user"></i> <span class="i-name">icon-user</span><span class="i-code">0xe007</span></div><div title="Code: 0xe005" class="the-icons span3"><i class="icon-videocam"></i> <span class="i-name">icon-videocam</span><span class="i-code">0xe005</span></div><div title="Code: 0xe00b" class="the-icons span3"><i class="icon-camera"></i> <span class="i-name">icon-camera</span><span class="i-code">0xe00b</span></div></div><div class="row"><div title="Code: 0xe01b" class="the-icons span3"><i class="icon-photo"></i> <span class="i-name">icon-photo</span><span class="i-code">0xe01b</span></div><div title="Code: 0xe029" class="the-icons span3"><i class="icon-attach"></i> <span class="i-name">icon-attach</span><span class="i-code">0xe029</span></div><div title="Code: 0xe00d" class="the-icons span3"><i class="icon-lock"></i> <span class="i-name">icon-lock</span><span class="i-code">0xe00d</span></div><div title="Code: 0xe013" class="the-icons span3"><i class="icon-eye"></i> <span class="i-name">icon-eye</span><span class="i-code">0xe013</span></div></div><div class="row"><div title="Code: 0xe00c" class="the-icons span3"><i class="icon-tag"></i> <span class="i-name">icon-tag</span><span class="i-code">0xe00c</span></div><div title="Code: 0xe01a" class="the-icons span3"><i class="icon-thumbs-up"></i> <span class="i-name">icon-thumbs-up</span><span class="i-code">0xe01a</span></div><div title="Code: 0xe00f" class="the-icons span3"><i class="icon-pencil"></i> <span class="i-name">icon-pencil</span><span class="i-code">0xe00f</span></div><div title="Code: 0xe014" class="the-icons span3"><i class="icon-comment"></i> <span class="i-name">icon-comment</span><span class="i-code">0xe014</span></div></div><div class="row"><div title="Code: 0xe012" class="the-icons span3"><i class="icon-location"></i> <span class="i-name">icon-location</span><span class="i-code">0xe012</span></div><div title="Code: 0xe016" class="the-icons span3"><i class="icon-cup"></i> <span class="i-name">icon-cup</span><span class="i-code">0xe016</span></div><div title="Code: 0xe006" class="the-icons span3"><i class="icon-trash"></i> <span class="i-name">icon-trash</span><span class="i-code">0xe006</span></div><div title="Code: 0xe018" class="the-icons span3"><i class="icon-doc"></i> <span class="i-name">icon-doc</span><span class="i-code">0xe018</span></div></div><div class="row"><div title="Code: 0xe01c" class="the-icons span3"><i class="icon-note"></i> <span class="i-name">icon-note</span><span class="i-code">0xe01c</span></div><div title="Code: 0xe00a" class="the-icons span3"><i class="icon-cog"></i> <span class="i-name">icon-cog</span><span class="i-code">0xe00a</span></div><div title="Code: 0xe01f" class="the-icons span3"><i class="icon-params"></i> <span class="i-name">icon-params</span><span class="i-code">0xe01f</span></div><div title="Code: 0xe02b" class="the-icons span3"><i class="icon-calendar"></i> <span class="i-name">icon-calendar</span><span class="i-code">0xe02b</span></div></div><div class="row"><div title="Code: 0xe004" class="the-icons span3"><i class="icon-sound"></i> <span class="i-name">icon-sound</span><span class="i-code">0xe004</span></div><div title="Code: 0xe01d" class="the-icons span3"><i class="icon-clock"></i> <span class="i-name">icon-clock</span><span class="i-code">0xe01d</span></div><div title="Code: 0xe00e" class="the-icons span3"><i class="icon-lightbulb"></i> <span class="i-name">icon-lightbulb</span><span class="i-code">0xe00e</span></div><div title="Code: 0xe003" class="the-icons span3"><i class="icon-tv"></i> <span class="i-name">icon-tv</span><span class="i-code">0xe003</span></div></div><div class="row"><div title="Code: 0xe011" class="the-icons span3"><i class="icon-desktop"></i> <span class="i-name">icon-desktop</span><span class="i-code">0xe011</span></div><div title="Code: 0xe017" class="the-icons span3"><i class="icon-mobile"></i> <span class="i-name">icon-mobile</span><span class="i-code">0xe017</span></div><div title="Code: 0xe02d" class="the-icons span3"><i class="icon-cd"></i> <span class="i-name">icon-cd</span><span class="i-code">0xe02d</span></div><div title="Code: 0xe015" class="the-icons span3"><i class="icon-inbox"></i> <span class="i-name">icon-inbox</span><span class="i-code">0xe015</span></div></div><div class="row"><div title="Code: 0xe02f" class="the-icons span3"><i class="icon-globe"></i> <span class="i-name">icon-globe</span><span class="i-code">0xe02f</span></div><div title="Code: 0xe001" class="the-icons span3"><i class="icon-cloud"></i> <span class="i-name">icon-cloud</span><span class="i-code">0xe001</span></div><div title="Code: 0xe01e" class="the-icons span3"><i class="icon-paper-plane"></i> <span class="i-name">icon-paper-plane</span><span class="i-code">0xe01e</span></div><div title="Code: 0xe028" class="the-icons span3"><i class="icon-fire"></i> <span class="i-name">icon-fire</span><span class="i-code">0xe028</span></div></div><div class="row"><div title="Code: 0xe024" class="the-icons span3"><i class="icon-graduation-cap"></i> <span class="i-name">icon-graduation-cap</span><span class="i-code">0xe024</span></div><div title="Code: 0xe023" class="the-icons span3"><i class="icon-megaphone"></i> <span class="i-name">icon-megaphone</span><span class="i-code">0xe023</span></div><div title="Code: 0xe021" class="the-icons span3"><i class="icon-database"></i> <span class="i-name">icon-database</span><span class="i-code">0xe021</span></div><div title="Code: 0xe008" class="the-icons span3"><i class="icon-key"></i> <span class="i-name">icon-key</span><span class="i-code">0xe008</span></div></div><div class="row"><div title="Code: 0xe025" class="the-icons span3"><i class="icon-beaker"></i> <span class="i-name">icon-beaker</span><span class="i-code">0xe025</span></div><div title="Code: 0xe02e" class="the-icons span3"><i class="icon-truck"></i> <span class="i-name">icon-truck</span><span class="i-code">0xe02e</span></div><div title="Code: 0xe020" class="the-icons span3"><i class="icon-money"></i> <span class="i-name">icon-money</span><span class="i-code">0xe020</span></div><div title="Code: 0xe026" class="the-icons span3"><i class="icon-food"></i> <span class="i-name">icon-food</span><span class="i-code">0xe026</span></div></div><div class="row"><div title="Code: 0xe02a" class="the-icons span3"><i class="icon-shop"></i> <span class="i-name">icon-shop</span><span class="i-code">0xe02a</span></div><div title="Code: 0xe010" class="the-icons span3"><i class="icon-diamond"></i> <span class="i-name">icon-diamond</span><span class="i-code">0xe010</span></div><div title="Code: 0xe027" class="the-icons span3"><i class="icon-t-shirt"></i> <span class="i-name">icon-t-shirt</span><span class="i-code">0xe027</span></div><div title="Code: 0xe02c" class="the-icons span3"><i class="icon-wallet"></i> <span class="i-name">icon-wallet</span><span class="i-code">0xe02c</span></div></div></div><div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div></body></html>
