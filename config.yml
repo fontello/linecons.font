@@ -81,7 +81,7 @@ meta:
   twitter: https://www.twitter.com/designmodo
   license: CC BY
 
-  css_prefix: "icon-"
+  css_prefix_text: "icon-"
   columns: 4
 
 font:
@@ -97,7 +97,7 @@ font:
   copyright: Copyright (C) 2013 by Designmodo
 
   ascent: 850
-  descent: 150
+  descent: -150
   weight: Normal
 
 
