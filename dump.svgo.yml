@@ -34,8 +34,9 @@ plugins:
   - moveElemsAttrsToGroup
   - collapseGroups
   - moveGroupAttrsToElems
-  - convertPathData
   - convertTransform
+  - convertPathData:
+      negativeExtraSpace: false
   - removeEmptyAttrs
   - removeEmptyContainers
   - mergePaths
