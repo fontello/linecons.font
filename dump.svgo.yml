@@ -37,11 +37,13 @@ plugins:
   - convertTransform
   - convertPathData:
       negativeExtraSpace: false
+      straightCurves: false
   - removeEmptyAttrs
   - removeEmptyContainers
   - mergePaths
   - cleanupIDs
   - removeUnusedNS
-  #- transformsWithOnePath:
-  #    hcrop: true
+  - transformsWithOnePath:
+      hcrop: true
+      negativeExtraSpace: false
 
